@@ -6,7 +6,9 @@ from scipy.optimize import minimize
 
 def distance_difference_squared(guess_location, pole, pole_measurement):
     ### STUDENT CODE START
-    output = 0
+    x_length = (guess_location[0] - pole[0])**2
+    y_length = (guess_location[1] - pole[1])**2
+    output = pole_measurement - np.sqrt(x_length + y_length)
     # calc distance between guess location and pole.
     # compare distance vs pole_measurement
     ### STUDENT CODE END
