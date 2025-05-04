@@ -1,11 +1,13 @@
 from helpers import plot_poles, plot_measurements
 import matplotlib.pyplot as plt
 import numpy as np
-
+import math
 
 def distance(location, pole_location):
     ### STUDENT CODE START
-    output = 0
+    x_length = abs(location[0] - pole_location[0])
+    y_length = abs(location[1] - pole_location[1])
+    output = math.sqrt(x_length**2 + y_length**2)
     ### STUDENT CODE END
     return output
 
